@@ -1,0 +1,7 @@
+EXECUTAR O PROJETO EM ANGULAR 13
+
+1) npm install
+
+2)ng serve --port 8081  
+
+3) http://localhost:8081/
