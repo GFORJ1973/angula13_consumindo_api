@@ -1,0 +1,66 @@
+<table border="0" align="center">
+  <tr>
+    <h3 border = none>Lista de Clientes</h3>
+  </tr>
+  <p></p>
+
+</table>
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Procurar por cpf"
+          [(ngModel)]="cpf"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchCpf()"
+          >
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+
+ 
+   
+          
+
+          <table border="1" >
+          
+            <thead >
+            
+              <tr >
+                <th style="width:10px">ID</th>
+                <th style="width:100px" >CPF</th>
+                <th style="width:700px" >Nome</th>
+                <th style="width:10px">Idade</th>
+              </tr>
+            </thead>
+            <tbody >
+              
+              <tr *ngFor="let cliente of clientes">
+                <td align="right">{{ cliente.id }}</td>
+                <td align="right">{{ cliente.cpf }}</td>
+                <td align="left">{{ cliente.nome }}</td>
+                <td align="right">{{ cliente.idade }}</td>
+              <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+          </table>
+
+      
+  
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllClientes()">
+        Remover Todos
+      </button>
+   
+ 
+    <div class="col-md-6">
+   
+    </div>
+  </div>
+  
